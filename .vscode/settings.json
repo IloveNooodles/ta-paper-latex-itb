@@ -9,6 +9,10 @@
     {
       "name": "latex_itb_ta Yudisium",
       "tools": ["latex_itb_make_yudisium", "latex_itb_move_yudisium"]
+    },
+    {
+      "name": "latex_itb_ta Paper",
+      "tools": ["latex_itb_make_paper", "latex_itb_move_paper"]
     }
   ],
   "latex-workshop.latex.tools": [
@@ -43,6 +47,21 @@
       "env": {}
     },
     {
+      "name": "latex_itb_make_paper",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-bibtex",
+        "-outdir=../build",
+        "-cd",
+        "./paper.tex"
+      ],
+      "env": {}
+    },
+    {
       "name": "latex_itb_move_thesis",
       "command": "cp",
       "args": ["-f", "%OUTDIR%/thesis.pdf", "%DIR%/../output/thesis.pdf"],
@@ -52,6 +71,12 @@
       "name": "latex_itb_move_yudisium",
       "command": "cp",
       "args": ["-f", "%OUTDIR%/yudisium.pdf", "%DIR%/../output/yudisium.pdf"],
+      "env": {}
+    },
+    {
+      "name": "latex_itb_move_paper",
+      "command": "cp",
+      "args": ["-f", "%OUTDIR%/paper.pdf", "%DIR%/../output/paper.pdf"],
       "env": {}
     }
   ],

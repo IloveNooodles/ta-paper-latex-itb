@@ -3,13 +3,21 @@
   "latex-workshop.latex.recipe.default": "lastUsed",
   "latex-workshop.latex.recipes": [
     {
-      "name": "latex_itb_ta LINUX",
-      "tools": ["latex_itb_make", "latex_itb_move"]
+      "name": "latex_itb_ta Thesis",
+      "tools": ["latex_itb_make_thesis", "latex_itb_move_thesis"]
+    },
+    {
+      "name": "latex_itb_ta Yudisium",
+      "tools": ["latex_itb_make_yudisium", "latex_itb_move_yudisium"]
+    },
+    {
+      "name": "latex_itb_ta Paper",
+      "tools": ["latex_itb_make_paper", "latex_itb_move_paper"]
     }
   ],
   "latex-workshop.latex.tools": [
     {
-      "name": "latex_itb_make",
+      "name": "latex_itb_make_thesis",
       "command": "latexmk",
       "args": [
         "-synctex=1",
@@ -19,14 +27,56 @@
         "-bibtex",
         "-outdir=../build",
         "-cd",
-        "src/thesis.tex"
+        "./thesis.tex"
       ],
       "env": {}
     },
     {
-      "name": "latex_itb_move",
+      "name": "latex_itb_make_yudisium",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-bibtex",
+        "-outdir=../build",
+        "-cd",
+        "./yudisium.tex"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latex_itb_make_paper",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-bibtex",
+        "-outdir=../build",
+        "-cd",
+        "./paper.tex"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latex_itb_move_thesis",
       "command": "cp",
       "args": ["-f", "%OUTDIR%/thesis.pdf", "%DIR%/../output/thesis.pdf"],
+      "env": {}
+    },
+    {
+      "name": "latex_itb_move_yudisium",
+      "command": "cp",
+      "args": ["-f", "%OUTDIR%/yudisium.pdf", "%DIR%/../output/yudisium.pdf"],
+      "env": {}
+    },
+    {
+      "name": "latex_itb_move_paper",
+      "command": "cp",
+      "args": ["-f", "%OUTDIR%/paper.pdf", "%DIR%/../output/paper.pdf"],
       "env": {}
     }
   ],
