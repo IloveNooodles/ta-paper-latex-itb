@@ -1,4 +1,4 @@
-Templat LaTeX Tesis Informatika ITB
+Template LaTeX Tesis & Paper Informatika ITB
 ===================================
 
 oleh:
@@ -12,13 +12,14 @@ Edited By:
 
 original repo:
 
-- <https://github.com/petrabarus/if-itb-latex/>  
-- <https://github.com/darkGrimoire/ta1-latex-itb>
+- Thesis <https://github.com/petrabarus/if-itb-latex/>  
+- Thesis <https://github.com/darkGrimoire/ta1-latex-itb>
+- Latex <https://github.com/alvinwilta/ieee-conference-latex>
 
 Dokumen ini merupakan templat LaTeX yang ditujukan untuk laporan
-tesis di program studi Teknik Informatika ITB. Templat ini penulis
-gunakan dalam penulisan laporan tesis penulis dan dengan semangat
-berbagi penulis memutuskan untuk mempublikasikan templat ini agar
+tesis dan paper di program studi Teknik Informatika ITB. Template ini penulis
+gunakan dalam penulisan laporan tesis dan paper penulis dan dengan semangat
+berbagi penulis memutuskan untuk mempublikasikan template ini agar
 dapat digunakan oleh banyak orang.
 
 Silakan mengunduh, menggunakan, memodifikasi, dan menyebarkan
@@ -27,7 +28,11 @@ templat ini. :)
 Contoh Hasil Build
 ---------
 
-<https://drive.google.com/file/d/1cRmhjs1gcVDRZ_SJGqA3ONM5jQIE6lx6/view>
+Berikut merupakan contoh ketiga file hasil build
+
+- [Thesis](./thesis.example.pdf)
+- [Yudisium](./yudisium.example.pdf)
+- [Paper](./paper.example.pdf)
 
 Instalasi
 ---------
@@ -81,14 +86,16 @@ make
 make.bat
 ```
 
-Hasil kompilasi akan berada pada berkas `output/thesis.pdf`.
+Hasil kompilasi akan berada pada directory `output`.
 
 Integrasi VSCode LaTeX Workshop
 ----------
 
 ![Demo Gif](demo.gif)
 
-Template ini telah diintegrasikan dengan VSCode extension LaTeX Workshop sehingga dapat melakukan build otomatis, memakai synctex, serta linter. Terdapat 2 file konfigurasi setelan vscode yang terdapat pada folder .vscode. Defaultnya adalah setelan Windows, namun Anda dapat menggantinya dengan setelan linux.
+Template ini telah diintegrasikan dengan VSCode extension LaTeX Workshop sehingga dapat melakukan build otomatis, memakai synctex, serta linter. Terdapat 2 file konfigurasi setelan vscode yang terdapat pada folder .vscode. Defaultnya adalah setelan UNIX, namun Anda dapat menggantinya dengan setelan windows.
+
+Karena terdapat tiga build command, jika ingin mengaktifkan fitur hot reload, maka perlu melakukan build file terkait dengan ekstensi LaTeX Workshop terlebih dahulu sebelum bisa mengaktifkan fitur hot reload. Pilih file mana yang akan dibuild (e.g. thesis) lalu tekan `Recipe: latex_itb_ta Thesis`. Setelah build selesai, maka fitur hot reload akan aktif untuk file tersebut.
 
 Shortcut Latex Workshop yang berguna
 ----------
@@ -120,3 +127,4 @@ Terima Kasih
 - Peb Ruswono Aryan atas bantuan pelengkapan struktur dokumen.
 - Petra Novandi atas template awal yang diberikan
 - Faris Riski Ekananda atas template dokumen yang telah dimodifikasi
+- Alvin Wilta atas template IEEE Latex for VSCode
