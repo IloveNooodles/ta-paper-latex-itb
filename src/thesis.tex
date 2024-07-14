@@ -12,14 +12,15 @@
 
 \documentclass[bahasa, 12pt, a4paper, onecolumn, oneside, final]{report}
 
-\input{config/if-itb-thesis.sty}
+\input{config/ta/if-itb-thesis.sty}
 \input{config/hypenation-id.tex}
+\input{config/hypenation-en.tex}
 
 \makeatletter
 
 \makeatother
 
-\addbibresource{references.bib}
+\addbibresource{references.example.bib}
 
 \begin{document}
 
@@ -34,15 +35,16 @@
 \pagenumbering{roman}
 \setcounter{page}{1}
 
-\input{chapters/cover}
-\input{chapters/approval-1}
-\input{chapters/statement}
+\input{chapters/ta/cover}
+\input{chapters/ta/approval-1}
+\input{chapters/ta/statement}
 
 \pagestyle{plain}
 
-\input{chapters/abstract-id}
+\input{chapters/ta/abstract-id}
 % \input{chapters/abstract-en}
-\input{chapters/forewords}
+
+\input{chapters/ta/forewords}
 
 \titleformat*{\section}{\centering\bfseries\Large\MakeUpperCase}
 \titlespacing*{\chapter}{0pt}{0pt}{4pt}
@@ -76,14 +78,14 @@
 % Dafter Bab
 % Untuk menambahkan daftar bab, buat berkas bab misalnya `chapter-6` di direktori `chapters`, dan masukkan ke sini.
 %----------------------------------------------------------------%
-\input{chapters/chapter-1}
-\input{chapters/chapter-2}
+\input{chapters/ta/chapter-1}
+\input{chapters/ta/chapter-2}
 % \blankpage
-\input{chapters/chapter-3}
+\input{chapters/ta/chapter-3}
 
-\input{chapters/chapter-4}
+\input{chapters/ta/chapter-4}
 
-\input{chapters/chapter-5}
+\input{chapters/ta/chapter-5}
 %---------------------------------------------------------------%
 
 % Daftar pustaka
@@ -96,6 +98,6 @@
 % Setting judul anak lampiran
 \titleformat*{\section}{\bfseries}
 
-\input{chapters/appendix/appendix}
+\input{chapters/ta/appendix/appendix}
 
 \end{document}

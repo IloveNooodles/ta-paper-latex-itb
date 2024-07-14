@@ -12,14 +12,15 @@
 
 \documentclass[bahasa, 12pt, a4paper, onecolumn, oneside, final]{report}
 
-\input{config/if-itb-thesis.sty}
+\input{config/ta/if-itb-thesis.sty}
 \input{config/hypenation-id.tex}
+\input{config/hypenation-en.tex}
 
 \makeatletter
 
 \makeatother
 
-\addbibresource{references.bib}
+\addbibresource{references.example.bib}
 
 \begin{document}
 
@@ -33,12 +34,12 @@
 
 \pagenumbering{gobble}
 
-\input{chapters/cover}
-\input{chapters/approval-1}
+\input{chapters/ta/cover}
+\input{chapters/ta/approval-1}
 
 \pagestyle{plain}
 
-\input{chapters/abstract-id}
-\input{chapters/abstract-en}
+\input{chapters/ta/abstract-id}
+\input{chapters/ta/abstract-en}
 
 \end{document}

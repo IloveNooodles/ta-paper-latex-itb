@@ -1,0 +1,38 @@
+\documentclass[conference,a4paper,english]{IEEEtran}
+\usepackage{config/paper/IEEEpaper}
+\input{config/hyphenation}
+
+% Adding references to the document
+\addbibresource{config/paper/IEEEabrv.bib}
+\addbibresource{references.paper.bib}
+
+\IEEEoverridecommandlockouts{}
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\begin{document}
+
+\title{Conference Paper Title*\\
+{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
+should not be used}
+\thanks{Identify applicable funding agency here. If none, delete this.}
+}
+
+\input{chapters/paper/authors}
+
+\maketitle
+
+\input{chapters/paper/abstract}
+
+\input{chapters/paper/chapter-1}
+\input{chapters/paper/chapter-2}
+\input{chapters/paper/chapter-3}
+
+
+\input{chapters/paper/acknowledgment}
+
+\printbibliography{}
+
+\vspace{12pt}
+\color{red}
+IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
+
+\end{document}
