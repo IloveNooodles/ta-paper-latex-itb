@@ -1,0 +1,101 @@
+%--------------------------------------------------------------------%
+%
+% Berkas utama templat LaTeX.
+%
+% author Petra Barus, Peb Ruswono Aryan, Faris Rizki Ekananda
+%
+%--------------------------------------------------------------------%
+%
+% Berkas ini berisi struktur utama dokumen LaTeX yang akan dibuat.
+%
+%--------------------------------------------------------------------%
+
+\documentclass[bahasa, 12pt, a4paper, onecolumn, oneside, final]{report}
+
+\input{config/if-itb-thesis.sty}
+\input{config/hypenation-id.tex}
+
+\makeatletter
+
+\makeatother
+
+\addbibresource{references.bib}
+
+\begin{document}
+
+\title{Judul TA}
+\date{}
+\author{
+  Muhammad Garebaldhie ER Rahman \\
+  NIM: 13520029
+}
+\newcommand\tanggalpengesahan{7 Juli 2024}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\input{chapters/cover}
+\input{chapters/approval-1}
+\input{chapters/statement}
+
+\pagestyle{plain}
+
+\input{chapters/abstract-id}
+% \input{chapters/abstract-en}
+\input{chapters/forewords}
+
+\titleformat*{\section}{\centering\bfseries\Large\MakeUpperCase}
+\titlespacing*{\chapter}{0pt}{0pt}{4pt}
+
+% Setting judul toc, lot, lof, bib
+\renewcommand{\contentsname}{DAFTAR ISI}
+\renewcommand{\listfigurename}{DAFTAR GAMBAR}
+\renewcommand{\listtablename}{DAFTAR TABEL}
+\renewcommand{\bibname}{DAFTAR PUSTAKA}
+
+% daftar isi, lampiran, gambar, table
+\tableofcontents
+\listofappendices
+\listoffigures
+\listoftables
+
+\newpage
+
+\titleformat*{\section}{\bfseries\large}
+\pagenumbering{arabic}
+
+%----------------------------------------------------------------%
+% Konfigurasi Bab
+%----------------------------------------------------------------%
+\setcounter{page}{1}
+\renewcommand{\chaptername}{BAB}
+\renewcommand{\thechapter}{\Roman{chapter}}
+%----------------------------------------------------------------%
+
+%----------------------------------------------------------------%
+% Dafter Bab
+% Untuk menambahkan daftar bab, buat berkas bab misalnya `chapter-6` di direktori `chapters`, dan masukkan ke sini.
+%----------------------------------------------------------------%
+\input{chapters/chapter-1}
+\input{chapters/chapter-2}
+% \blankpage
+\input{chapters/chapter-3}
+
+\input{chapters/chapter-4}
+
+\input{chapters/chapter-5}
+%---------------------------------------------------------------%
+
+% Daftar pustaka
+\printbibliography
+
+% Setting judul lampiran
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+\titlespacing*{\section}{0pt}{0pt}{*1}
+
+% Setting judul anak lampiran
+\titleformat*{\section}{\bfseries}
+
+\input{chapters/appendix/appendix}
+
+\end{document}

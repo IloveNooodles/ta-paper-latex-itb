@@ -1,0 +1,44 @@
+%--------------------------------------------------------------------%
+%
+% Berkas utama templat LaTeX.
+%
+% author Petra Barus, Peb Ruswono Aryan, Faris Rizki Ekananda
+%
+%--------------------------------------------------------------------%
+%
+% Berkas ini berisi struktur utama dokumen LaTeX yang akan dibuat.
+%
+%--------------------------------------------------------------------%
+
+\documentclass[bahasa, 12pt, a4paper, onecolumn, oneside, final]{report}
+
+\input{config/if-itb-thesis.sty}
+\input{config/hypenation-id.tex}
+
+\makeatletter
+
+\makeatother
+
+\addbibresource{references.bib}
+
+\begin{document}
+
+\title{Judul TA Di isi}
+\date{}
+\author{
+  Muhammad Garebaldhie ER Rahman \\
+  NIM: 13520029
+}
+\newcommand\tanggalpengesahan{7 Juli 2024}
+
+\pagenumbering{gobble}
+
+\input{chapters/cover}
+\input{chapters/approval-1}
+
+\pagestyle{plain}
+
+\input{chapters/abstract-id}
+\input{chapters/abstract-en}
+
+\end{document}

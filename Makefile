@@ -15,3 +15,5 @@ yudisium:
 clean:
 	rm -rf output/* build/*
 	find . -iname "*~" -exec rm '{}' ';'
+
+.PHONY: all clean install yudisium
